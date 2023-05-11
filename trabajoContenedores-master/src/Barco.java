@@ -129,7 +129,7 @@ public class Barco {
         }
         if (comentario == "")
         {
-            comentario = "\nNo hay ningún contenedor con prioridad"+prioridad; //En caso de que no haya contenedores con esa prioridad
+            comentario = "\nNo hay ningún contenedor con prioridad "+prioridad; //En caso de que no haya contenedores con esa prioridad
         }
         return comentario;
     }
