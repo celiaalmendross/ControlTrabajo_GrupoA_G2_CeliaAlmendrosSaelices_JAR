@@ -40,6 +40,13 @@ public class Puerto {
         return puerto[0].contenedoresPais(pais)+puerto[1].contenedoresPais(pais)+puerto[2].contenedoresPais(pais);
     }
 
+    public String buscaPrioridad(int prioridad)
+    {
+        return "Barco 1:\n"+puerto[0].buscaPrioridad(prioridad)+
+                "\nBarco 2:\n"+puerto[1].buscaPrioridad(prioridad)+
+                "\nBarco 3:\n"+puerto[2].buscaPrioridad(prioridad);
+    }
+
     public void setIndice(int indice) {
         this.indice = indice;
     }

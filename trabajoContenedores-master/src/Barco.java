@@ -107,6 +107,32 @@ public class Barco {
         return cantidad;
     }
 
+    public String buscaPrioridad(int prioridad){
+        int c, f;
+        String comentario="";
+        for(c=0; c<COLUMNAS; c++){
+            for(f=0; f<FILAS; f++){
+                if(contenedor[f][c]!=null){
+                    if(contenedor[f][c].getPrioridad()==prioridad){
+                        comentario += "\nCONTENEDOR: "+contenedor[f][c].getIdentificador()+"\nEmpresa remitente: "+contenedor[f][c].getEmpresa_que_envia()+
+                                "\nPeso: "+contenedor[f][c].getPeso();
+                        if(contenedor[f][c].isAduanas()){
+                            comentario  += "\nHa sido inspeccionado por el control de aduanas";
+                        }
+                        else{
+                            comentario += "\nNo ha sido inspeccionado por el control de aduanas";
+                        }
+                    }
+                }
+            }
+        }
+        if (comentario == "")
+        {
+            comentario = "\nNo hay ningún contenedor con prioridad"+prioridad;
+        }
+        return comentario;
+    }
+
 }
 
 

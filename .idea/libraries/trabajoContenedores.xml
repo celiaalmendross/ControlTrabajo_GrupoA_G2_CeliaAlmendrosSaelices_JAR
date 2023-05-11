@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="trabajoContenedores">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/trabajoContenedores-master/out/artifacts/trabajoContenedores_jar/trabajoContenedores.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
