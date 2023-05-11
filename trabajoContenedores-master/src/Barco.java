@@ -113,11 +113,12 @@ public class Barco {
         for(c=0; c<COLUMNAS; c++){
             for(f=0; f<FILAS; f++){
                 if(contenedor[f][c]!=null){
-                    if(contenedor[f][c].getPrioridad()==prioridad){
-                        comentario += "\nCONTENEDOR: "+contenedor[f][c].getIdentificador()+"\nEmpresa remitente: "+contenedor[f][c].getEmpresa_que_envia()+
+                    if(contenedor[f][c].getPrioridad()==prioridad){ //Identificamos los contenedores con la prioridad que nos solicitan
+                        comentario += "\nCONTENEDOR: "+contenedor[f][c].getIdentificador()+
+                                "\nEmpresa remitente: "+contenedor[f][c].getEmpresa_que_envia()+ //Guardamos la información necesaria de cada uno
                                 "\nPeso: "+contenedor[f][c].getPeso();
                         if(contenedor[f][c].isAduanas()){
-                            comentario  += "\nHa sido inspeccionado por el control de aduanas";
+                            comentario  += "\nHa sido inspeccionado por el control de aduanas"; //Escribimos si ha sido o no inspeccionado por aduanas
                         }
                         else{
                             comentario += "\nNo ha sido inspeccionado por el control de aduanas";
@@ -128,7 +129,7 @@ public class Barco {
         }
         if (comentario == "")
         {
-            comentario = "\nNo hay ningún contenedor con prioridad"+prioridad;
+            comentario = "\nNo hay ningún contenedor con prioridad"+prioridad; //En caso de que no haya contenedores con esa prioridad
         }
         return comentario;
     }
